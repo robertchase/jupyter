@@ -3,3 +3,5 @@
 ### reference
 
 https://www.dataquest.io/blog/docker-data-science/
+
+https://plot.ly/python/basic-charts/

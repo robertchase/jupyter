@@ -1,0 +1,4 @@
+*.swp
+notebooks/.*
+notebooks/Untitled*
+notebooks/*.png
