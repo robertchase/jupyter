@@ -1,4 +1,4 @@
-.PHONY: minimal scipy plotly ipython build
+.PHONY: plotly minimal scipy ipython build
 
 ifeq ($(GIT),)
   GIT := $(HOME)/git
@@ -10,14 +10,14 @@ PLOTLY := jupyter-plotly
 
 DOCKER := docker run -p 8888:8888 -v $(GIT):/opt/git -w /opt/git/jupyter/notebooks
 
+plotly:
+	$(DOCKER) $(PLOTLY)
+
 minimal:
 	$(DOCKER) $(MINIMAL)
 
 scipy:
 	$(DOCKER) $(SCIPY)
-
-plotly:
-	$(DOCKER) $(PLOTLY)
 
 build:
 	docker build -t $(PLOTLY) -f Dockerfile .
